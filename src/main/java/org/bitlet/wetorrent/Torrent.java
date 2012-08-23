@@ -260,7 +260,7 @@ public class Torrent extends InterruptableTasksThread {
             if (Torrent.verbose) {
                 addEvent(new Event(e, "Exception writing piece", Level.SEVERE));
             }
-            e.printStackTrace(System.err);
+            log.error("Exception writing piece", e);
         }
 
 
@@ -328,7 +328,7 @@ public class Torrent extends InterruptableTasksThread {
             }
 
         } else {
-            System.err.println("WTF!!!");
+        	log.error("WTF!!!");
         }
     }
 

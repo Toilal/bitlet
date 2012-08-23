@@ -33,9 +33,12 @@ import org.bitlet.wetorrent.Torrent;
 import org.bitlet.wetorrent.peer.TorrentPeer;
 import org.bitlet.wetorrent.peer.message.Message;
 import org.bitlet.wetorrent.util.thread.ThreadTask;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MessageReceiver implements ThreadTask {
-
+	private static Logger log = LoggerFactory.getLogger(MessageReceiver.class);
+	
     private TorrentPeer peer;
     private long lastReceivedMessageMillis;
     private long receivedBytes;
@@ -157,7 +160,7 @@ public class MessageReceiver implements ThreadTask {
             if (Torrent.verbose) {
                 peer.getPeersManager().getTorrent().addEvent(new Event(peer, "Problem waiting for new message", Level.WARNING));
             }
-            e.printStackTrace(System.err);
+            log.error("Problem waiting for new message", e);
             throw e;
         }
         return true;

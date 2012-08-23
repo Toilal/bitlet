@@ -73,12 +73,12 @@ public class TorrentPeer implements Peer {
 
         bitfield = new byte[peersManager.getTorrent().getTorrentDisk().getBitfieldCopy().length];
 
-        mainThread = new InterruptableTasksThread();
+        mainThread = new InterruptableTasksThread("TorrentPeer" + ip + ":" + port);
         mainThread.addTask(new StartConnection(this));
         mainThread.addTask(new Handshake(this));
         mainThread.addTask(new SendBitfield(this));
 
-        receiverThread = new InterruptableTasksThread();
+        receiverThread = new InterruptableTasksThread("TorrentPeerReceiver" + ip + ":" + port);
         messageReceiver = new MessageReceiver(this);
         receiverThread.addTask(messageReceiver);
         mainThread.addTask(new StartMessageReceiver(this));
@@ -93,11 +93,11 @@ public class TorrentPeer implements Peer {
         ip = socket.getInetAddress();
 
 
-        mainThread = new InterruptableTasksThread();
+        mainThread = new InterruptableTasksThread("TorrentPeer" + ip + ":" + port);
         mainThread.addTask(new Handshake(this, incomingPeerListener));
         mainThread.addTask(new SendBitfield(this));
 
-        receiverThread = new InterruptableTasksThread();
+        receiverThread = new InterruptableTasksThread("TorrentPeerReceiver" + ip + ":" + port);
         messageReceiver = new MessageReceiver(this);
         receiverThread.addTask(messageReceiver);
         mainThread.addTask(new StartMessageReceiver(this));

@@ -74,7 +74,7 @@ public class WebSeed implements Peer{
         random.nextBytes(peerId);
         System.arraycopy("-WT-HTTP".getBytes(), 0, peerId, 0, 8);
 
-        downloaderThread = new InterruptableTasksThread();
+        downloaderThread = new InterruptableTasksThread("TorrentSeed-" + url.toString());
         downloaderThread.addTask(new HttpRangeDownloader());
     }
 

@@ -36,9 +36,12 @@ import org.bitlet.wetorrent.peer.TorrentPeer;
 import org.bitlet.wetorrent.util.stream.OutputStreamLimiter;
 import org.bitlet.wetorrent.util.thread.ThreadTask;
 import org.bitlet.wetorrent.util.Utils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Handshake implements ThreadTask {
-
+	private static Logger log = LoggerFactory.getLogger(Handshake.class);
+	
     TorrentPeer peer;
 
     public Handshake(TorrentPeer peer) {
@@ -124,9 +127,7 @@ public class Handshake implements ThreadTask {
             peer.getPeersManager().connected(peer);
 
         } catch (IOException e) {
-            if (Torrent.verbose) {
-                System.err.println("Problem parsing header");
-            }
+        	log.error("Problem parsing header");
             throw e;
         }
         return false;
@@ -141,9 +142,7 @@ public class Handshake implements ThreadTask {
 
     public void exceptionCought(Exception e) {
         if (e instanceof EOFException) {
-            if (Torrent.verbose) {
-                System.err.println("Connection dropped");
-            }
+        	log.error("Connection dropped");
         }
         if (incomingPeerListener != null) {
             incomingPeerListener.removePeer(peer);
