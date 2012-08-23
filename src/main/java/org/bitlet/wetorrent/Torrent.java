@@ -24,6 +24,7 @@
 
 package org.bitlet.wetorrent;
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
@@ -83,7 +84,8 @@ public class Torrent extends InterruptableTasksThread {
     }
 
     public Torrent(Metafile metafile, TorrentDisk torrentDisk, IncomingPeerListener incomingPeerListener, BandwidthLimiter uploadBandwidthLimiter, PieceChooser pieceChooser) {
-
+    	super("Torrent-" + metafile.getName());
+    	
         this.uploadBandwidthLimiter = uploadBandwidthLimiter;
         this.incomingPeerListener = incomingPeerListener;
         this.metafile = metafile;
@@ -380,12 +382,12 @@ public class Torrent extends InterruptableTasksThread {
         getPeersManager().interrupt();
     }
 
-    public void startDownload() throws Exception {
+    public void startDownload() throws UnknownHostException, IOException {
         stopped = true;
         Map firstResponseDictionary = trackerRequest("started");
 
         if (firstResponseDictionary == null) {
-            throw new Exception("Problem while sending tracker request");
+            throw new IOException("Problem while sending tracker request.");
         }
 
         Object peers = firstResponseDictionary.get(ByteBuffer.wrap("peers".getBytes()));

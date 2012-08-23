@@ -48,7 +48,8 @@ public class IncomingPeerListener extends InterruptableTasksThread {
     private int receivedConnection = 0;
 
     public IncomingPeerListener(int port) {
-
+    	super("TorrentPeerListener");
+    	
         log.debug("Binding incoming server socket");
         while (port < 65535 && serverSocket == null) {
             try {
@@ -67,6 +68,8 @@ public class IncomingPeerListener extends InterruptableTasksThread {
         
         log.info("Listing for incoming peer on port " + port);
         this.port = port;
+        
+        setName(getName() + "-" + this.port);
 
         final IncomingPeerListener incomingPeerListener = this;
         addTask(new ThreadTask() {
@@ -94,7 +97,7 @@ public class IncomingPeerListener extends InterruptableTasksThread {
             }
 
             public void exceptionCought(Exception e) {
-                e.printStackTrace();
+            	log.error("Exception in " + IncomingPeerListener.this, e);
                 throw new RuntimeException(e);
             }
         });
