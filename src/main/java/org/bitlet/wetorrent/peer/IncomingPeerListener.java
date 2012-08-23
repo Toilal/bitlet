@@ -35,8 +35,11 @@ import java.util.Set;
 import org.bitlet.wetorrent.Torrent;
 import org.bitlet.wetorrent.util.thread.InterruptableTasksThread;
 import org.bitlet.wetorrent.util.thread.ThreadTask;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class IncomingPeerListener extends InterruptableTasksThread {
+	private static Logger log = LoggerFactory.getLogger(IncomingPeerListener.class);
 
     ServerSocket serverSocket;
     private Map<ByteBuffer, Torrent> torrents = new HashMap<ByteBuffer, Torrent>();
@@ -46,27 +49,23 @@ public class IncomingPeerListener extends InterruptableTasksThread {
 
     public IncomingPeerListener(int port) {
 
-        if (Torrent.verbose) {
-            System.err.println("Binding incoming server socket");
-        }
+        log.debug("Binding incoming server socket");
         while (port < 65535 && serverSocket == null) {
             try {
                 serverSocket = new ServerSocket(port);
             } catch (Exception e) {
-
-                if (Torrent.verbose) {
-                    System.err.println("Cannot bind port " + port);
-                }
+            	log.debug("Cannot bind port " + port);
                 port++;
             }
         }
 
         if (serverSocket == null) {
 
-            System.err.println("Cannot bind the incoming socket");
+        	log.error("Cannot bind the incoming socket");
             return;
         }
-
+        
+        log.info("Listing for incoming peer on port " + port);
         this.port = port;
 
         final IncomingPeerListener incomingPeerListener = this;
@@ -137,7 +136,8 @@ public class IncomingPeerListener extends InterruptableTasksThread {
 
     public void interrupt() {
         super.interrupt();
-
+        
+        log.info("Interrupting " + this);
         for (TorrentPeer p : dispatchingPeers) {
             p.interrupt();
         }
@@ -146,6 +146,13 @@ public class IncomingPeerListener extends InterruptableTasksThread {
     public synchronized void removePeer(TorrentPeer peer) {
         dispatchingPeers.remove(peer);
     }
+    
+    @Override
+    public String toString() {
+    	return "IncomingPeerListener (" + this.serverSocket + ")";
+    }
+    
+    
 }
 
 

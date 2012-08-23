@@ -45,8 +45,11 @@ import org.bitlet.wetorrent.disk.TorrentDisk;
 import org.bitlet.wetorrent.pieceChooser.PieceChooser;
 import org.bitlet.wetorrent.util.thread.InterruptableTasksThread;
 import org.bitlet.wetorrent.util.Utils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Torrent extends InterruptableTasksThread {
+	private static Logger log = LoggerFactory.getLogger(Torrent.class);
 
     public static final short maxUnfulfilledRequestNumber = 6;
     private Metafile metafile;
@@ -169,9 +172,19 @@ public class Torrent extends InterruptableTasksThread {
     }
 
     public synchronized void addEvent(Event event) {
-
-        System.err.println(event.getDescription() + ": " + event.getAuthor());
-    /* events.add(event); */
+    	if (event.getLevel().intValue() < Level.FINE.intValue()) {
+    		log.trace(event.getDescription() + ": " + event.getAuthor());
+    	} else if (event.getLevel().intValue() < Level.INFO.intValue()) {
+    		log.debug(event.getDescription() + ": " + event.getAuthor());
+    	} else if (event.getLevel().intValue() < Level.WARNING.intValue()) {
+    		log.info(event.getDescription() + ": " + event.getAuthor());
+    	} else if (event.getLevel().intValue() < Level.SEVERE.intValue()) {
+    		log.warn(event.getDescription() + ": " + event.getAuthor());
+    	} else {
+    		log.error(event.getDescription() + ": " + event.getAuthor());
+    	}
+    	
+    	
     }
 
     public Metafile getMetafile() {

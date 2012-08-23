@@ -155,7 +155,6 @@ public class Bencode {
             readChar = is.read();
         } while (readChar != 'e');
 
-        // System.out.println("Loaded int: " + buff);
         return Long.parseLong(buff.toString());
     }
 
@@ -211,7 +210,6 @@ public class Bencode {
         byte[] byteString = new byte[length];
         for (int i = 0; i < byteString.length; i++) {
             byteString[i] = (byte) is.read();
-        // System.out.println("Loaded string: " + new String(byteString));
         }
         return ByteBuffer.wrap(byteString);
     }
