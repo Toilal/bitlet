@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.91">
+  <channel>
+    <title>bitlet - Checkstyle report</title>
+    <link>https://github.com/Toilal/bitlet</link>
+    <description>bitlet - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2012</copyright>
+    <item>
+      <title>File: 37,
+             Errors: 1815,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>https://github.com/Toilal/bitlet/checkstyle.html</link>
+      <description>
+        <p>Click <a href="https://github.com/Toilal/bitlet/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.Peer.java">org/bitlet/wetorrent/peer/Peer.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  20
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.disk.PlainFileSystemTorrentDisk.java">org/bitlet/wetorrent/disk/PlainFileSystemTorrentDisk.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  92
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.task.MessageSender.java">org/bitlet/wetorrent/peer/task/MessageSender.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  60
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.task.SendBitfield.java">org/bitlet/wetorrent/peer/task/SendBitfield.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.pieceChooser.RouletteWheelPieceChooser.java">org/bitlet/wetorrent/pieceChooser/RouletteWheelPieceChooser.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.PeersManager.java">org/bitlet/wetorrent/peer/PeersManager.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  63
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.task.StartConnection.java">org/bitlet/wetorrent/peer/task/StartConnection.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  24
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.pieceChooser.RequestExtended.java">org/bitlet/wetorrent/pieceChooser/RequestExtended.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  22
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.TorrentPeer.java">org/bitlet/wetorrent/peer/TorrentPeer.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  183
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.disk.FilePieceMapper.java">org/bitlet/wetorrent/disk/FilePieceMapper.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  20
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.task.Handshake.java">org/bitlet/wetorrent/peer/task/Handshake.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  50
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.Tracker.java">org/bitlet/wetorrent/Tracker.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  51
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.IncomingPeerListener.java">org/bitlet/wetorrent/peer/IncomingPeerListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  58
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.util.thread.InterruptableTasksThread.java">org/bitlet/wetorrent/util/thread/InterruptableTasksThread.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  26
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.WebSeed.java">org/bitlet/wetorrent/peer/WebSeed.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  98
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.disk.Piece.java">org/bitlet/wetorrent/disk/Piece.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  78
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.choker.Choker.java">org/bitlet/wetorrent/choker/Choker.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  31
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.util.stream.BandwidthLimiter.java">org/bitlet/wetorrent/util/stream/BandwidthLimiter.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  39
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.Sample.java">org/bitlet/wetorrent/Sample.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  12
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.pieceChooser.PieceChooser.java">org/bitlet/wetorrent/pieceChooser/PieceChooser.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  175
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.task.MessageReceiver.java">org/bitlet/wetorrent/peer/task/MessageReceiver.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  46
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.message.Have.java">org/bitlet/wetorrent/peer/message/Have.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.disk.ResumeListener.java">org/bitlet/wetorrent/disk/ResumeListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.task.StartMessageReceiver.java">org/bitlet/wetorrent/peer/task/StartMessageReceiver.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.util.thread.ThreadTask.java">org/bitlet/wetorrent/util/thread/ThreadTask.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.Metafile.java">org/bitlet/wetorrent/Metafile.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  104
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.message.Piece.java">org/bitlet/wetorrent/peer/message/Piece.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  33
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.util.Utils.java">org/bitlet/wetorrent/util/Utils.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  54
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.bencode.DictionaryComparator.java">org/bitlet/wetorrent/bencode/DictionaryComparator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  15
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.Torrent.java">org/bitlet/wetorrent/Torrent.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  188
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.disk.TorrentDisk.java">org/bitlet/wetorrent/disk/TorrentDisk.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  32
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.message.Request.java">org/bitlet/wetorrent/peer/message/Request.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  27
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.message.Cancel.java">org/bitlet/wetorrent/peer/message/Cancel.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  30
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.bencode.Bencode.java">org/bitlet/wetorrent/bencode/Bencode.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  35
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.Event.java">org/bitlet/wetorrent/Event.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  34
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.util.stream.OutputStreamLimiter.java">org/bitlet/wetorrent/util/stream/OutputStreamLimiter.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  29
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/Toilal/bitlet/checkstyle.html#org.bitlet.wetorrent.peer.message.Message.java">org/bitlet/wetorrent/peer/message/Message.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  27
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+
