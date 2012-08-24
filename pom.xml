@@ -4,8 +4,9 @@
 	<groupId>com.pragmasphere</groupId>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>bitlet</artifactId>
+	<name>Pragmasphere Bitlet</name>
 	<packaging>jar</packaging>
-	<name>bitlet</name>
+	
 	<description>Pragmasphere Fork of the Bitlet Java BitTorrent Library. Original version can be found at http://code.google.com/p/bitlet/</description>
 	
 	<licenses>
@@ -28,6 +29,38 @@
 		<connection>scm:git:git://github.com/Toilal/bitlet.git</connection>
 		<developerConnection>scm:git:git@github.com:Toilal/bitlet.git</developerConnection>
 	</scm>
+	
+	<inceptionYear>2012</inceptionYear>
+	
+	<organization>
+		<name>Pragmasphere</name>
+		<url>http://www.pragmasphere.com</url>
+	</organization>
+	
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/Toilal/bitlet/issues</url>
+	</issueManagement>
+	
+	<developers>
+		<developer>
+			<id>toilal</id>
+			<name>Toilal</name>
+			<email>toilal.dev@gmail.com</email>
+			<url>http://www.pragmasphere.com</url>
+			<organization>Pragmasphere</organization>
+			<organizationUrl>http://www.pragmasphere.com</organizationUrl>
+			<roles>
+				<role>project leader</role>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>+1</timezone>
+			<properties>
+				<picUrl>http://www.gravatar.com/avatar/21015e63a667c87344708374f2c89598.png</picUrl>
+			</properties>
+		</developer>
+	</developers>
 	
 	<build>
 		<plugins>
@@ -54,7 +87,7 @@
 				<artifactId>downloads-maven-plugin</artifactId>
 				<version>0.6</version>
 				<configuration>
-					<description>Official ${project.name} build of the ${project.version} release</description>
+					<description>${project.name} - ${project.version}</description>
 					<override>true</override>
 					<includeAttached>true</includeAttached>
 					<server>github</server>
@@ -64,7 +97,7 @@
 						<goals>
 							<goal>upload</goal>
 						</goals>
-						<phase>deploy</phase>
+						<phase>site</phase>
 					</execution>
 				</executions>
 			</plugin>
