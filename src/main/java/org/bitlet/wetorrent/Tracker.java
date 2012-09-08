@@ -145,4 +145,9 @@ public class Tracker {
         this.key = key;
     }
     
+    @Override
+    public String toString() {
+    	return "Tracker: " + announce;
+    }
+    
 }

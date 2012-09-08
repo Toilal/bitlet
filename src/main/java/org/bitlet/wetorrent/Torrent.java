@@ -161,10 +161,7 @@ public class Torrent extends InterruptableTasksThread {
                         return responseDictionary;
                     }
                 } catch (Exception e) {
-                    int ciccio = 2;
-                    if (Torrent.verbose) {
-                        addEvent(new Event(this, e.toString(), Level.INFO));
-                    }
+                    addEvent(new Event(this, t + " " + e.toString(), Level.INFO));
                 }
             }
 
@@ -387,7 +384,7 @@ public class Torrent extends InterruptableTasksThread {
         Map firstResponseDictionary = trackerRequest("started");
 
         if (firstResponseDictionary == null) {
-            throw new IOException("Problem while sending tracker request.");
+            throw new IOException("No valid trackers were found.");
         }
 
         Object peers = firstResponseDictionary.get(ByteBuffer.wrap("peers".getBytes()));
